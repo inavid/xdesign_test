@@ -29,7 +29,7 @@ Route::get('/logout', function () {
 
 Route::get('images/{filename}', function ($filename)
 {
-    $path = storage_path() . '/app/public/images/' . $filename;
+    $path = storage_path() . '/app/images/' . $filename;
 
     if(!File::exists($path)) abort(404);
 

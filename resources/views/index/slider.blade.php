@@ -35,12 +35,14 @@
                             <div class="carousel-caption">
                                 @if($banner->tipobanner_id == 1)
                                     <div class="text-content">
-                                        Webcast {{$banner->periodo}}, {{$banner->fecha}} 
-                                        <br>{{$banner->hora}}
-                                        <br>
+                                        <p>
+                                            Webcast {{$banner->periodo}}, {{$banner->fecha}} 
+                                            <br>{{$banner->hora}}
+                                            <br>
+                                        </p>
                                         <div class="buttons">
                                             <button class="btn btn-danger"><a target="_blank" href='<?php echo asset("$banner->flyer")?>'>Invitacion</a></button>
-                                            <button class="btn btn-danger"><a href="{{$banner->link}}">Registro</a></button>
+                                            <button class="btn btn-danger"><a target="_blank" href="{{$banner->link}}">Registro</a></button>
                                         </div>
                                     </div>
                                 @else 
