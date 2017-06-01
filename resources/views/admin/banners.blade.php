@@ -15,56 +15,45 @@
         <div class="col-md-8 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Banners</div>
-                <form style="margin: 10px;">
+                <form style="margin: 10px;" action="/admin/banner/save" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label for="tipo">Tipo:</label>
-                        <select class="form-control" id="tipo">
+                        <select class="form-control" id="tipo" name="tipo_banner">
                             <option value="1">Webcast</option>
                             <option value="2">Sports World Day</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha del evento:</label>
+                        <input type="text" class="form-control" id="fecha" name="fecha">
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Flyer evento:</label>
+                        <input type="file" class="form-control" id="flyer" name="flyer">
+                    </div>
+                    <div class="form-group">
+                        <label for="background">Background:</label>
+                        <input type="file" class="form-control" id="background" name="background">
+                    </div>
                     <div class="webcast-fields">
                         <div class="form-group">
                             <label for="periodo">Periodo:</label>
-                            <input type="text" class="form-control" id="periodo">
-                        </div>
-                        <div class="form-group">
-                            <label for="periodo">Fecha del evento:</label>
-                            <input type="text" class="form-control" id="periodo">
+                            <input type="text" class="form-control" id="periodo" name="periodo">
                         </div>
                         <div class="form-group">
                             <label for="hora">Hora del evento:</label>
-                            <input type="text" class="form-control" id="hora">
-                        </div>
-                        <div class="form-group">
-                            <label for="hora">Flyer evento:</label>
-                            <input type="file" class="form-control" id="flyer">
+                            <input type="text" class="form-control" id="hora" name="hora">
                         </div>
                         <div class="form-group">
                             <label for="url">Link registro:</label>
-                            <input type="text" class="form-control" id="url">
-                        </div>
-                        <div class="form-group">
-                            <label for="background">Background:</label>
-                            <input type="file" class="form-control" id="background">
+                            <input type="text" class="form-control" id="url" name="url">
                         </div>
                     </div>
                     <div class="swday-fields">
                         <div class="form-group">
-                            <label for="periodo">Fecha del evento:</label>
-                            <input type="text" class="form-control" id="periodo">
-                        </div>
-                        <div class="form-group">
-                            <label for="hora">Flyer evento:</label>
-                            <input type="file" class="form-control" id="flyer">
-                        </div>
-                        <div class="form-group">
                             <label for="mail_contact">Correo asistencia:</label>
-                            <input type="text" class="form-control" id="mail_contact">
-                        </div>
-                        <div class="form-group">
-                            <label for="background">Background:</label>
-                            <input type="file" class="form-control" id="background">
+                            <input type="text" class="form-control" id="mail_contact" name="mail_contact">
                         </div>
                     </div>
                     <div class="row text-center">

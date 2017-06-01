@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Banner;
 
 class IndexController extends Controller
 {
@@ -11,10 +12,12 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function webcast()
+    public function index()
     {
         //
-        return view('webcast/webcast');
+        $banners = Banner::all();
+
+        return view('index/slider',['banners' => $banners]);
     }
 
     /**

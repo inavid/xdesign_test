@@ -18,17 +18,35 @@
     display:table-cell;
     vertical-align: middle;
     text-align:center;
+}
+
+.carousel-caption p {
     font-size: 25px;
+    margin-top: 10%;
+    margin-right: 30%;
 }
 
 .carousel-caption .buttons {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    margin: 20px;
-
+    font-size: 25px;
+    margin-top: 1%;
+    margin-right: 30%;
 }
 
 .item {
     position:relative;
+}
+
+a, a:hover, a:active, a:visited { color: white; }
+
+#logo_sw {
+    background-image: url("http://sw_demo.app/images/sports_world_logo.svg");
+    background-repeat: no-repeat;
+    width: 100%; /*or your image's width*/
+    height: 100%; /*or your image's height*/
+    padding: 0;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    z-index: 1;
+    display:table;
 }
